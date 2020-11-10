@@ -26,14 +26,7 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
 
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
+
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="AIzaSyC9CjgE06ZmMPZucs0xcRhWCjj9TiGV5ds"/>
@@ -58,6 +51,10 @@
                 android:name=".MapsActivity"
                 android:label="Select Map">
         </activity>
+        <activity android:name=".AfterActivity"/>
+        <activity android:name=".ChatActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".RegisterActivity"/>
 
 
     </application>
