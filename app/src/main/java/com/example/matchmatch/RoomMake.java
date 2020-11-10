@@ -5,22 +5,26 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.DatabaseUtils;
 import android.graphics.Color;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.provider.CalendarContract;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.*;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.DatePicker;
-import android.widget.TimePicker;
 import com.example.matchmatch.Room.Room;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import org.w3c.dom.Text;
 
 //import androidx.preference.PreferenceFrageementCompat;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -50,14 +54,35 @@ public class RoomMake extends AppCompatActivity {
 
         Button submitbutton=(Button)findViewById(R.id.submitaddgame);
         Button cancelbutton =(Button)findViewById(R.id.canceladdgame);
+        Button addressbutton=(Button)findViewById(R.id.address);
 
         final EditText roomsubject=(EditText)findViewById(R.id.room_subject);
 
 
         final EditText dateset=(EditText)findViewById(R.id.date);
         final EditText timeset=(EditText)findViewById(R.id.time1);
+        final TextView latadd=(TextView) findViewById(R.id.lat);
+        final TextView lngadd=(TextView)findViewById(R.id.lng);
 
         final EditText locationset=(EditText)findViewById(R.id.location);
+
+        final Geocoder geocoder=new Geocoder(this,Locale.getDefault());
+
+
+
+//        Intent intentmap=getIntent();
+//
+//        if(!TextUtils.isEmpty(intentmap.getStringExtra("latitude")))
+//        {
+//            String lat= intentmap.getExtras().getString("latitude");
+//            String lng= intentmap.getExtras().getString("longtitude");
+//
+//
+//            latadd.setText(lat);
+//            lngadd.setText(lng);
+//        }
+
+
 
         dateset.setOnClickListener(new View.OnClickListener(){
 
@@ -97,6 +122,63 @@ public class RoomMake extends AppCompatActivity {
             }
         });
 
+
+        addressbutton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                List<Address> list=null;
+
+                String address1=locationset.getText().toString();
+                Log.e("Address",address1);
+                try{
+                    list=geocoder.getFromLocationName(address1,10);
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                    //Log.e("geocoder","error");
+
+                }
+
+                Address latlng=list.get(0);
+                double latt=latlng.getLatitude();
+                double lngt=latlng.getLongitude();
+
+                Log.e("lat",Double.toString(latt));
+                Log.e("lat",Double.toString(lngt));
+
+                latadd.setText(Double.toString(latt));
+                lngadd.setText(Double.toString(lngt));
+
+//                if(list.isEmpty())
+//                {
+//                    Log.e("Address","No Address");
+//                }
+//                else
+//                {
+//                    Address latlng=list.get(0);
+//                    double latt=latlng.getLatitude();
+//                    double lngt=latlng.getLongitude();
+//
+//                    Log.e("lat",Double.toString(latt));
+//                    Log.e("lat",Double.toString(lngt));
+//
+//                    latadd.setText(Double.toString(latt));
+//                    lngadd.setText(Double.toString(lngt));
+//                }
+
+
+
+            }
+        }
+        );
+
+
+
+
+
         //submit button
         submitbutton.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -130,9 +212,13 @@ public class RoomMake extends AppCompatActivity {
         cancelbutton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.print("hello cancel");
-                EditText location1=(EditText)findViewById(R.id.location);
-                location1.setText("This is Cancel");
+
+                Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
+
+                String location1=locationset.getText().toString();
+                intent.putExtra("location",location1);
+
+                startActivity(intent);
             }
 
         });
