@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_addgame);
 
-
+        //조광식 푸쉬 테스트
         Button submitbutton=(Button)findViewById(R.id.submitaddgame);
         Button cancelbutton =(Button)findViewById(R.id.canceladdgame);
 
