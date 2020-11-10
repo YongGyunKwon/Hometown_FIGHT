@@ -127,25 +127,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
+//
+//        button.setOnClickListener(new Button.OnClickListener(){
+//            @Override
+//            public void onClick(View v)
+//            {
+//                Intent intent2 = new Intent(getApplicationContext(),RoomMake.class);
+//
+//                intent2.putExtra("latitude",lattoadd);
+//                intent2.putExtra("longtitude",lngtoadd);
+//
+//                startActivity(intent2);
+//            }
+//
+//        });
 
-        button.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v)
-            {
-                Intent intent2 = new Intent(getApplicationContext(),RoomMake.class);
+        Intent intenter = new Intent(getApplicationContext(),RoomMake.class);
 
-                intent2.putExtra("latitude",lattoadd);
-                intent2.putExtra("longtitude",lngtoadd);
+        String latitude=intenter.getExtras().getString("latitude");
+        String longtitude=intenter.getExtras().getString("longtitude");
 
-                startActivity(intent2);
-            }
-
-        });
-
+        Double lat=Double.parseDouble(latitude);
+        Double lon=Double.parseDouble(longtitude);
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng sydney1 = new LatLng(lat,lon);
+        mMap.addMarker(new MarkerOptions().position(sydney1).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney1));
     }
 }

@@ -33,6 +33,10 @@ public class RoomMake extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef= database.getReference();
 
+    String latt1;
+    String lngt1;
+
+
     Calendar myCalendar = Calendar.getInstance();
 
     DatePickerDialog.OnDateSetListener myDatePicker=new DatePickerDialog.OnDateSetListener() {
@@ -66,9 +70,20 @@ public class RoomMake extends AppCompatActivity {
 
         final EditText locationset=(EditText)findViewById(R.id.location);
 
+        final NumberPicker homepick=(NumberPicker)findViewById(R.id.homepicker);
+        final NumberPicker awaypick=(NumberPicker)findViewById(R.id.awaypicker);
+
+
         final Geocoder geocoder=new Geocoder(this,Locale.getDefault());
 
 
+        homepick.setMinValue(0);
+        homepick.setMaxValue(11);
+        homepick.setOnLongPressUpdateInterval(100);
+
+        awaypick.setMinValue(0);
+        awaypick.setMaxValue(11);
+        awaypick.setOnLongPressUpdateInterval(100);
 
 //        Intent intentmap=getIntent();
 //
@@ -152,6 +167,10 @@ public class RoomMake extends AppCompatActivity {
                 latadd.setText(Double.toString(latt));
                 lngadd.setText(Double.toString(lngt));
 
+//                latt1=Double.toString(latt);
+//                lngt1=Double.toString(lngt);
+
+
 //                if(list.isEmpty())
 //                {
 //                    Log.e("Address","No Address");
@@ -190,8 +209,18 @@ public class RoomMake extends AppCompatActivity {
                 String date=dateset.getText().toString();
                 String time=timeset.getText().toString();
                 String location=locationset.getText().toString();
+                String latitude=latadd.getText().toString();
+                String longitude=lngadd.getText().toString();
 
-                Room room = new Room(subject,date,time,location);
+
+                Integer homen=homepick.getValue();
+                Integer awayn=awaypick.getValue();
+
+                String homenumber=homen.toString();
+                String awaynumber=awayn.toString();
+
+
+                Room room = new Room(subject,date,time,location,latitude,longitude,homenumber,awaynumber);
 
                 myRef.child("room").push().setValue(room);
 
@@ -199,6 +228,10 @@ public class RoomMake extends AppCompatActivity {
                 intent.putExtra("date",date);
                 intent.putExtra("time",time);
                 intent.putExtra("location",location);
+                intent.putExtra("latitude",latitude);
+                intent.putExtra("longtitude",longitude);
+                intent.putExtra("homenumber",homenumber);
+                intent.putExtra("awaynumber",awaynumber);
 
                 startActivity(intent);
 
@@ -208,7 +241,7 @@ public class RoomMake extends AppCompatActivity {
         });
 
 
-
+        //testing
         cancelbutton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -216,7 +249,12 @@ public class RoomMake extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
 
                 String location1=locationset.getText().toString();
-                intent.putExtra("location",location1);
+
+                String latitude=latadd.getText().toString();
+                String longitude=lngadd.getText().toString();
+
+                intent.putExtra("latitude",latitude);
+                intent.putExtra("longtitude",longitude);
 
                 startActivity(intent);
             }
