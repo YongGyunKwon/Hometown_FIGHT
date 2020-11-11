@@ -29,6 +29,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //    private TextView longt;
     private EditText editText;
 
+    String lattoadd;
+    String lngtoadd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
