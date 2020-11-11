@@ -8,20 +8,6 @@
         tools:context=".RoomMake">
 
 
-    <NumberPicker
-
-            android:id="@+id/homepicker"
-
-            android:layout_width="61dp"
-
-            android:layout_height="110dp"
-
-            android:background="#00FFFFFF"
-            android:layout_marginTop="113dp" app:layout_constraintEnd_toStartOf="@+id/submitaddgame"
-            android:layout_marginBottom="112dp" app:layout_constraintTop_toTopOf="@+id/address"
-            app:layout_constraintStart_toStartOf="@+id/awaypicker" android:layout_marginLeft="111dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="111dp"
-            android:layout_marginEnd="111dp" android:layout_marginRight="111dp"/>
     <TextView
             android:text="게임 만들기"
             android:layout_width="214dp"
@@ -52,34 +38,37 @@
             android:gravity="start|top"
             android:ems="10"
             android:id="@+id/location"
-            app:layout_constraintTop_toBottomOf="@+id/locationtext" app:layout_constraintEnd_toEndOf="@+id/address"
-            app:layout_constraintBottom_toTopOf="@+id/lat" app:layout_constraintStart_toStartOf="@+id/lat"/>
-    <Button
-            android:text="주소입력완료"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/address"
-            app:layout_constraintTop_toBottomOf="@+id/location" android:layout_marginEnd="61dp"
-            android:layout_marginRight="61dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginTop="7dp"
+            app:layout_constraintTop_toBottomOf="@+id/locationtext"
+            app:layout_constraintEnd_toEndOf="@+id/time1" app:layout_constraintBottom_toTopOf="@+id/lat"
+            app:layout_constraintStart_toStartOf="@+id/lat"/>
     <TextView
             android:text="경도"
             android:layout_width="0dp"
             android:layout_height="18dp"
             android:id="@+id/lng"
-            android:layout_marginTop="78dp"
-            app:layout_constraintEnd_toStartOf="@+id/textView4" android:layout_marginBottom="79dp"
-            app:layout_constraintBottom_toTopOf="@+id/awaypicker" app:layout_constraintTop_toTopOf="@+id/locationtext"
-            app:layout_constraintStart_toStartOf="@+id/awaypicker" android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"/>
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="26dp" app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintBottom_toTopOf="@+id/mapview" app:layout_constraintTop_toTopOf="@+id/lat"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp" android:layout_marginEnd="34dp" android:layout_marginRight="34dp"/>
+    <Button
+            android:text="주소입력완료"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/address"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="62dp"
+            android:layout_marginRight="62dp" android:layout_marginBottom="245dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
             android:text="위도"
             android:layout_width="0dp"
             android:layout_height="17dp"
             android:id="@+id/lat"
-            android:layout_marginTop="238dp"
-            android:layout_marginBottom="238dp" app:layout_constraintEnd_toEndOf="@+id/lng"
-            app:layout_constraintBottom_toTopOf="@+id/canceladdgame"
-            app:layout_constraintTop_toTopOf="@+id/room_subject" app:layout_constraintStart_toStartOf="@+id/lng"/>
+            android:layout_marginTop="55dp"
+            app:layout_constraintTop_toBottomOf="@+id/locationtext" android:layout_marginBottom="54dp"
+            app:layout_constraintEnd_toEndOf="@+id/lng" app:layout_constraintBottom_toTopOf="@+id/mapview"
+            app:layout_constraintStart_toStartOf="@+id/lng"/>
     <TextView
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -96,26 +85,30 @@
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:id="@+id/locationtext"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.472"
-            app:layout_constraintStart_toStartOf="@+id/location" android:layout_marginEnd="3dp"
-            android:layout_marginRight="3dp" app:layout_constraintEnd_toEndOf="@+id/lat"/>
+            app:layout_constraintEnd_toEndOf="@+id/lat" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lat" android:layout_marginLeft="1dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp" android:layout_marginRight="1dp"/>
     <TextView
             android:text="날짜(Date)"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
             android:id="@+id/Datetext"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="24dp" android:layout_marginTop="226dp" android:layout_marginStart="24dp"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/date"
+            android:layout_marginTop="220dp" app:layout_constraintEnd_toEndOf="@+id/locationtext"/>
+
+
     <EditText
             android:text="YYYY-DD-MM"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="48dp"
             android:inputType="date"
             android:ems="10"
             android:id="@+id/date"
-            app:layout_constraintTop_toBottomOf="@+id/Datetext" app:layout_constraintEnd_toEndOf="@+id/time1"
-            app:layout_constraintBottom_toTopOf="@+id/time1" app:layout_constraintStart_toStartOf="@+id/Datetext"/>
+            android:layout_marginTop="131dp"
+            android:layout_marginBottom="131dp" app:layout_constraintEnd_toEndOf="@+id/time1"
+            app:layout_constraintBottom_toTopOf="@+id/address" app:layout_constraintTop_toTopOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/time1"/>
     <EditText
             android:text="time"
             android:layout_width="0dp"
@@ -123,13 +116,10 @@
             android:inputType="time"
             android:ems="10"
             android:id="@+id/time1"
-            android:layout_marginTop="165dp"
-            android:layout_marginBottom="164dp" app:layout_constraintEnd_toEndOf="@+id/location"
-            app:layout_constraintTop_toTopOf="@+id/textView3" app:layout_constraintStart_toStartOf="@+id/locationtext"
-            app:layout_constraintBottom_toBottomOf="@+id/textView" android:layout_marginEnd="3dp"
-            android:layout_marginRight="3dp"/>
-
-
+            android:layout_marginTop="88dp"
+            android:layout_marginBottom="89dp" app:layout_constraintEnd_toEndOf="@+id/mapview"
+            app:layout_constraintBottom_toTopOf="@+id/address" app:layout_constraintTop_toTopOf="@+id/Datetext"
+            app:layout_constraintStart_toStartOf="@+id/locationtext"/>
     <NumberPicker
 
             android:id="@+id/awaypicker"
@@ -139,16 +129,29 @@
             android:layout_height="0dp"
 
             android:background="#00FFFFFF"
-            app:layout_constraintEnd_toEndOf="@+id/canceladdgame" app:layout_constraintTop_toTopOf="@+id/homepicker"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/homepicker" android:layout_marginStart="24dp"
-            android:layout_marginEnd="31dp" android:layout_marginRight="31dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="24dp" android:layout_marginStart="24dp"
+            app:layout_constraintTop_toTopOf="@+id/homepicker"
+            app:layout_constraintBottom_toBottomOf="@+id/homepicker"/>
+    <NumberPicker
+
+            android:id="@+id/homepicker"
+
+            android:layout_width="61dp"
+
+            android:layout_height="0dp"
+
+            android:background="#00FFFFFF"
+            android:layout_marginTop="19dp"
+            app:layout_constraintStart_toEndOf="@+id/textView4" app:layout_constraintEnd_toEndOf="@+id/textView4"
+            android:layout_marginBottom="18dp" app:layout_constraintBottom_toTopOf="@+id/canceladdgame"
+            app:layout_constraintTop_toTopOf="@+id/mapview"/>
     <Button
             android:text="@android:string/cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/canceladdgame"
-            android:backgroundTint="#B63737"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="28dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="28dp"
             android:layout_marginBottom="32dp"/>
@@ -157,7 +160,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/submitaddgame"
-            android:backgroundTint="#1017E4"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp" android:layout_marginBottom="32dp"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -166,15 +168,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/awaypicker" android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp" android:layout_marginBottom="11dp"
-            app:layout_constraintBottom_toTopOf="@+id/awaypicker"/>
+            app:layout_constraintStart_toStartOf="@+id/awaypicker" android:layout_marginTop="13dp"
+            app:layout_constraintTop_toBottomOf="@+id/lng"/>
     <TextView
             android:text="Away"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/homepicker" android:layout_marginBottom="9dp"
-            app:layout_constraintBottom_toTopOf="@+id/homepicker"/>
+            android:layout_marginLeft="48dp"
+            android:layout_marginStart="48dp" app:layout_constraintStart_toEndOf="@+id/awaypicker"
+            android:layout_marginBottom="11dp" app:layout_constraintBottom_toTopOf="@+id/homepicker"/>
+    <Button
+            android:text="Map"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:id="@+id/mapview" android:layout_marginTop="155dp"
+            app:layout_constraintTop_toBottomOf="@+id/time1" android:layout_marginBottom="156dp"
+            app:layout_constraintEnd_toEndOf="@+id/address" app:layout_constraintStart_toStartOf="@+id/address"
+            android:layout_marginLeft="2dp" app:layout_constraintBottom_toBottomOf="@+id/submitaddgame"
+            android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:layout_marginRight="2dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
