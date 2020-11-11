@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/soccerlist_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_soccer"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="6"
+            android:background="#ffffff"
+            android:gravity="bottom"
+            android:text="축구"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:src="@drawable/trophy"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/make_soccer_room_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="5"
+            android:background="#ffffff"
+            android:gravity="bottom"
+            android:text="방만들기"
+            android:textColor="#808080"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

@@ -33,8 +33,9 @@
 
 
         <activity
-                android:name=".RoomMake"
+                android:name=".MainActivity"
                 android:label="title_activity_room_make1">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -42,10 +43,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".RoomMake">
+
 
         </activity>
         <activity android:name=".RoomView"/>
+        <activity android:name=".SoccerlistActivity"/>
+        <activity android:name=".SoccerroomActivity"/>
 
         <activity
                 android:name=".MapsActivity"

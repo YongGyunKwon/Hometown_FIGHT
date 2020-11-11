@@ -47,4 +47,5 @@ dependencies {
     compile 'com.google.firebase:firebase-database:19.5.1'
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
 
+
 }
