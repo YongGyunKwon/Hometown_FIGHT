@@ -5,9 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.ListFragment;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -18,9 +23,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class SoccerlistActivity extends Activity {
+public class SoccerlistActivity extends ListActivity {
 
     Datainfo datainfo;
+
+    ImageButton join_btn;
 
    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
    DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -48,6 +55,15 @@ public class SoccerlistActivity extends Activity {
             }
         });
 
+        join_btn = findViewById(R.id.go_join_button);
+
+        join_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getAfterActivity();
+            }
+        });
+
         //dapter = new DatainfoAdapter();
 
         datas.add(new Datainfo("재밌게 축구할 사람~", "2020-11-18", "20:30", "충북 청주시 개신동 충북대학교"));
@@ -61,11 +77,11 @@ public class SoccerlistActivity extends Activity {
         DatainfoAdapter db_adapter = new DatainfoAdapter(getLayoutInflater(), db_datas);
 
         //위에 만든 Adapter 객체를 AdapterView의 일종인 ListView에 설정.
-        //listview.setAdapter(adapter);
+        listview.setAdapter(adapter);
 
 
         //listview.setAdapter(db_adapter);
-
+        /*
         firebaseAuth = FirebaseAuth.getInstance();
         //final String myUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -90,7 +106,7 @@ public class SoccerlistActivity extends Activity {
 
 
 
-        });
+        });*/
 
     }
 
@@ -99,10 +115,16 @@ public class SoccerlistActivity extends Activity {
         startActivity(intent);
     }
 
+    private void getAfterActivity() {
+        Intent intent = new Intent(this, AfterActivity.class);
+        startActivity(intent);
+    }
 
-    //@Override
+
+    @Override
     public void onListItemClick(ListView l, View v, int position, long id){
         // MenberData 변수 선언
+
         Datainfo item = (Datainfo) l.getItemAtPosition(position);
 
         // 변수에 데이터 넣기
@@ -117,6 +139,6 @@ public class SoccerlistActivity extends Activity {
         intent.putExtra("HM",hm);
         intent.putExtra("STATE",state);
         intent.putExtra("TITLETEXT",titletext);
-        //startActivity(intent);
+        startActivity(intent);
     }
 }
