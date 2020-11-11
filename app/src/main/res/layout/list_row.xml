@@ -87,4 +87,18 @@
 
     </LinearLayout>
 
+
+
+    <Button android:id="@+id/part"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_weight="3"
+        android:background="@drawable/background"
+        android:text="참가"
+        android:textSize="30sp"
+        android:layout_marginLeft="3dp"/>
+
+
+
+
 </LinearLayout>
