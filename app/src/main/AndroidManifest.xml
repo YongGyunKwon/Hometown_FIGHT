@@ -44,11 +44,11 @@
         </activity>
 
         <activity android:name=".RoomMake">
-                        <intent-filter>
-                            <action android:name="android.intent.action.MAIN"/>
+<!--                        <intent-filter>-->
+<!--                            <action android:name="android.intent.action.MAIN"/>-->
 
-                            <category android:name="android.intent.category.LAUNCHER"/>
-                        </intent-filter>
+<!--                            <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--                        </intent-filter>-->
         </activity>
         <activity android:name=".RoomView"/>
         <activity android:name=".SoccerlistActivity"/>
@@ -60,7 +60,15 @@
         </activity>
         <activity android:name=".AfterActivity"/>
         <activity android:name=".ChatActivity"/>
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
         <activity android:name=".RegisterActivity"/>
 
 

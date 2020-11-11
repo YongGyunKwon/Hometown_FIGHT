@@ -10,9 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.content.Intent;
@@ -92,12 +89,12 @@ public class MemberDataAdapter extends BaseAdapter {
 
         if( convertView==null){
 
-            convertView= inflater.inflate(R.layout.list_row, null);
+            convertView= inflater.inflate(R.layout.list_row2, null);
 
         }
 
 
-        final TextView text_name= convertView.findViewById(R.id.text_title); //text_name
+        final TextView text_name= convertView.findViewById(R.id.text_name);
         final TextView text_nation= convertView.findViewById(R.id.info);
         LinearLayout teamline = convertView.findViewById(R.id.teamline);
         final Button partbtn = convertView.findViewById(R.id.part);
