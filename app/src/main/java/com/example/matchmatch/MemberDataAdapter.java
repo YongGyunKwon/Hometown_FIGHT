@@ -97,7 +97,7 @@ public class MemberDataAdapter extends BaseAdapter {
         }
 
 
-        final TextView text_name= convertView.findViewById(R.id.text_name);
+        final TextView text_name= convertView.findViewById(R.id.text_title); //text_name
         final TextView text_nation= convertView.findViewById(R.id.info);
         LinearLayout teamline = convertView.findViewById(R.id.teamline);
         final Button partbtn = convertView.findViewById(R.id.part);
