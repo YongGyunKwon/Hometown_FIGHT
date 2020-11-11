@@ -8,6 +8,10 @@ public class Datainfo {
     String hm; //시간,분
     String state; //장소
 
+    public Datainfo(){
+
+    }
+
     public Datainfo(String titletext, String md, String hm, String state) {
         // TODO Auto-generated constructor stub
         //생성자함수로 전달받은 Member의 정보를 멤버변수에 저장

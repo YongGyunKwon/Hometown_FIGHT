@@ -61,14 +61,15 @@ public class SoccerlistActivity extends Activity {
         DatainfoAdapter db_adapter = new DatainfoAdapter(getLayoutInflater(), db_datas);
 
         //위에 만든 Adapter 객체를 AdapterView의 일종인 ListView에 설정.
-        listview.setAdapter(adapter);
+        //listview.setAdapter(adapter);
 
-        listview.setAdapter(db_adapter);
+
+        //listview.setAdapter(db_adapter);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        final String myUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        //final String myUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        databaseReference.child("room").child(myUid).addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("room").child("MLib5Tbicje2SFD5wcH").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -116,6 +117,6 @@ public class SoccerlistActivity extends Activity {
         intent.putExtra("HM",hm);
         intent.putExtra("STATE",state);
         intent.putExtra("TITLETEXT",titletext);
-        startActivity(intent);
+        //startActivity(intent);
     }
 }
