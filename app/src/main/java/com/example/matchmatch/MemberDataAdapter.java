@@ -92,7 +92,7 @@ public class MemberDataAdapter extends BaseAdapter {
 
         if( convertView==null){
 
-            convertView= inflater.inflate(R.layout.list_row, null);
+            convertView= inflater.inflate(R.layout.list_row2, null);
 
         }
 
