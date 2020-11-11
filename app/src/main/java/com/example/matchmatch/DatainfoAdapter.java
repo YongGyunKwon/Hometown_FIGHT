@@ -12,6 +12,7 @@ import java.util.ArrayList;
 //extends BaseAdapter;
 public class DatainfoAdapter extends BaseAdapter {
     ArrayList<Datainfo> datas;
+
     LayoutInflater inflater; //XML에 있는걸 화면에 가져오는거
 
 
