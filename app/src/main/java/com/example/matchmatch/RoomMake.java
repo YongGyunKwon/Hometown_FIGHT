@@ -57,6 +57,7 @@ public class RoomMake extends AppCompatActivity {
 
 
         Button submitbutton=(Button)findViewById(R.id.submitaddgame);
+        Button mapviewbutton =(Button)findViewById(R.id.mapview);
         Button cancelbutton =(Button)findViewById(R.id.canceladdgame);
         Button addressbutton=(Button)findViewById(R.id.address);
 
@@ -240,23 +241,31 @@ public class RoomMake extends AppCompatActivity {
             }
         });
 
-
-        //testing
-        cancelbutton.setOnClickListener(new Button.OnClickListener() {
+        mapviewbutton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
+                Intent intent1 = new Intent(getApplicationContext(),MapsActivity.class);
 
                 String location1=locationset.getText().toString();
 
                 String latitude=latadd.getText().toString();
                 String longitude=lngadd.getText().toString();
 
-                intent.putExtra("latitude",latitude);
-                intent.putExtra("longtitude",longitude);
 
-                startActivity(intent);
+                intent1.putExtra("latitude",latitude);
+                intent1.putExtra("longtitude",longitude);
+                intent1.putExtra("location",location1);
+                startActivity(intent1);
+            }
+
+        });
+
+        cancelbutton.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.e("11","This is Cancel");
             }
 
         });
