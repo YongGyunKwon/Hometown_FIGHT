@@ -158,15 +158,19 @@ public class RoomMake extends AppCompatActivity {
 
                 }
 
-                Address latlng=list.get(0);
-                double latt=latlng.getLatitude();
-                double lngt=latlng.getLongitude();
+                if(!list.isEmpty())
+                {
+                    Address latlng=list.get(0);
+                    double latt=latlng.getLatitude();
+                    double lngt=latlng.getLongitude();
 
-                Log.e("lat",Double.toString(latt));
-                Log.e("lat",Double.toString(lngt));
+                    Log.e("lat",Double.toString(latt));
+                    Log.e("lat",Double.toString(lngt));
 
-                latadd.setText(Double.toString(latt));
-                lngadd.setText(Double.toString(lngt));
+                    latadd.setText(Double.toString(latt));
+                    lngadd.setText(Double.toString(lngt));
+
+                }
 
 //                latt1=Double.toString(latt);
 //                lngt1=Double.toString(lngt);

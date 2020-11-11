@@ -71,9 +71,9 @@ public class RegisterActivity extends AppCompatActivity {
                                 hashMap.put("participate",participate);
                                 hashMap.put("reliability",reliability);
 
-                                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                DatabaseReference reference = database.getReference("Users");
-                                reference.child(uid).setValue(hashMap);
+//                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                                DatabaseReference reference = database.getReference("Users");
+//                                reference.child(uid).setValue(hashMap);
 
 
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

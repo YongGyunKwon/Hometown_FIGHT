@@ -23,7 +23,7 @@
             android:label="우리동네승부사"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
 
 
@@ -34,7 +34,7 @@
 
         <activity
                 android:name=".MainActivity"
-                android:label="title_activity_room_make1">
+                >
 
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN"/>-->
@@ -56,7 +56,7 @@
 
         <activity
                 android:name=".MapsActivity"
-                android:label="Select Map">
+                >
         </activity>
         <activity android:name=".AfterActivity"/>
         <activity android:name=".ChatActivity"/>

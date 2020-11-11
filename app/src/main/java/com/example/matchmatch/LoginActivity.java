@@ -67,12 +67,12 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
 
-                                    Intent myintent = new Intent(getApplicationContext(), AfterActivity.class);
+                                    Intent myintent = new Intent(getApplicationContext(), MainActivity.class);
                                     myintent.putExtra("email", myemail);
 
 
 
-                                    Intent intent = new Intent(getApplicationContext(), AfterActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
 
                                 }else{
