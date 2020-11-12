@@ -58,7 +58,6 @@ public class SoccerlistActivity extends ListActivity {
         //join_btn = findViewById(R.id.go_join_button);
 
         //dapter = new DatainfoAdapter();
-
         datas.add(new Datainfo("재밌게 축구할 사람~", "2020-11-18", "20:30", "충북 청주시 개신동 충북대학교", "1/4명"));
         datas.add(new Datainfo("축구 고수들만 모이세요", "2020-11-19", "21:00", "충북 청주시 복대동 충북체육관","1/6명"));
         datas.add(new Datainfo("축구 초보들만~", "2020-11-20", "17:30", "충북 청주시 개신동 충북운동장","5/8명"));

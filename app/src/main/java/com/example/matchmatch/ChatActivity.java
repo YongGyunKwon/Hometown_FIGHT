@@ -34,7 +34,7 @@ public class ChatActivity extends AppCompatActivity{
         final EditText editText = (EditText) findViewById(R.id.message);
         Button sendButton = (Button) findViewById(R.id.send);
 
-        final String userName = "Doksa08";
+        final String userName = "Trio";
 
 
         final ArrayAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1);

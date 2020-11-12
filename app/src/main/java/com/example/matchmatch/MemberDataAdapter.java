@@ -104,15 +104,25 @@ public class MemberDataAdapter extends BaseAdapter {
         text_name.setText( datas.get(position).getName() );
         text_nation.setText( datas.get(position).getinfo() );
         teamline.setBackgroundColor(datas.get(position).getcolor());
+        partbtn.setText(datas.get(position).getbuttonText());
 
         partbtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
+                if(partbtn.getText().equals("참가")){
+                    text_name.setText("Trio");
+                    text_nation.setText("신뢰도: 100, 참가횟수: 0");
+                    partbtn.setText("취소");
+                }
+                else{
+                    text_name.setText("EMPTY");
+                    text_nation.setText("empty");
+                    partbtn.setText("참가");
+                }
 
-                text_name.setText("Doksa08");
-                text_nation.setText("신뢰도: 100, 참가횟수: 0");
-                partbtn.setText("취소");
+
+
 
             }
         });

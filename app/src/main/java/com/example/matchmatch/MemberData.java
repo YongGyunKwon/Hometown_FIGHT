@@ -6,8 +6,9 @@ public class MemberData {
     String name;
     String info;
     int color;
+    String buttonText;
 
-    public MemberData(String name, String info, int color) {
+    public MemberData(String name, String info, int color, String buttonText) {
 
 // TODO Auto-generated constructor stub
 
@@ -18,6 +19,7 @@ public class MemberData {
         this.info=info;
 
         this.color = color;
+        this.buttonText = buttonText;
 
     }
 
@@ -50,10 +52,18 @@ public class MemberData {
 
     }
 
+    public void setbuttonText(String buttonText){
+        this.buttonText = buttonText;
+    }
+
     public String getName() {
 
         return name;
 
+    }
+
+    public String getbuttonText(){
+        return buttonText;
     }
 
 
