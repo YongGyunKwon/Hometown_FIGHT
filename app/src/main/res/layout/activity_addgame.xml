@@ -126,18 +126,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"/>
                     <Button
-                            android:text="주소입력완료"
+                            android:text="주소 입력"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/address"
-                            android:background="@color/common_google_signin_btn_text_dark_disabled"
+                            android:background="@drawable/roundbutton"
                     />
                     <Button
-                            android:text="Map"
+                            android:text="지도 확인"
                             android:layout_width="98dp"
                             android:layout_height="39dp"
                             android:id="@+id/mapview"
-                            android:background="@color/common_google_signin_btn_text_dark_disabled"
+                            android:background="@drawable/roundbutton"
                     />
                 </TableRow>
             </TableLayout>
@@ -202,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/canceladdgame"
-                    android:background="@color/common_google_signin_btn_text_dark_disabled"
+                    android:background="@drawable/roundbutton"
             />
             <Space
                     android:layout_width="wrap_content"
@@ -212,7 +212,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/submitaddgame"
-                    android:background="@color/common_google_signin_btn_text_dark_disabled"
+                    android:background="@drawable/roundbutton"
             />
         </LinearLayout>
         <Space
