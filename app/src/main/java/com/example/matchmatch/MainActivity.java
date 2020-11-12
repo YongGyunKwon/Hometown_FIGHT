@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btn[8]= findViewById(R.id.imageButton9);
         mypagebtn = findViewById(R.id.mypageButton);
 
+
         btn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -68,6 +68,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+
 //        searchbutton.setOnClickListener(new Button.OnClickListener(){
 //            @Override
 //            public void onClick(View v){

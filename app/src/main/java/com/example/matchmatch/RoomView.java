@@ -26,7 +26,8 @@ public class RoomView extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef= database.getReference("room");
 
-        
+        System.out.println("helo world! ");
+        System.out.println("Android Stu");
 
 
 
