@@ -53,6 +53,7 @@
         <activity android:name=".RoomView"/>
         <activity android:name=".SoccerlistActivity"/>
         <activity android:name=".SoccerroomActivity"/>
+        <activity android:name=".SoccerlistnextActivity"/>
 
         <activity
                 android:name=".MapsActivity"

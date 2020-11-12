@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.os.Bundle;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 
@@ -59,11 +61,13 @@ public class DatainfoAdapter extends BaseAdapter {
         TextView text_md_text= (TextView)convertView.findViewById(R.id.text_md);
         TextView text_hm_text= (TextView)convertView.findViewById(R.id.text_hm);
         TextView text_state_text= (TextView)convertView.findViewById(R.id.text_state);
+        TextView text_people= (TextView)convertView.findViewById(R.id.text_people);
 
         text_title_text.setText( datas.get(position).getTitletext() );
         text_md_text.setText( "날짜 : "+datas.get(position).getMd() );
         text_hm_text.setText( "시간 : " + datas.get(position).getHm() );
         text_state_text.setText( "장소 : " + datas.get(position).getState() );
+        text_people.setText("인원: " + datas.get(position).getPeople());
 
         return convertView;
     }
