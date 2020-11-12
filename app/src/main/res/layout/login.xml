@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/trop"
+        android:src="@drawable/logo3"
         android:layout_marginTop="70dp"/>
 
     <TextView
