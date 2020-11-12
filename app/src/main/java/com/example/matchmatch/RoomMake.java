@@ -208,7 +208,7 @@ public class RoomMake extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(),RoomView.class);
+                Intent intent = new Intent(getApplicationContext(),SoccerlistnextActivity.class);
 
                 String subject=roomsubject.getText().toString();
                 String date=dateset.getText().toString();
