@@ -2,7 +2,9 @@
 
     android:layout_width="match_parent"
 
-    android:layout_height="70dp"
+    android:layout_height="50dp"
+
+    android:background="@drawable/rec"
 
     android:orientation="horizontal"
     android:id="@+id/teamline"
@@ -16,8 +18,7 @@
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rec"
-        android:text="42342344"
+        android:text=" 42342344"
         android:textSize="30sp" />
 
 
