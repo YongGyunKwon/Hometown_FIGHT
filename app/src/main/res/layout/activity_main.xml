@@ -11,24 +11,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
 
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="100sp"
+            android:layout_width="77sp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
+            android:layout_marginLeft="13sp"
             android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/mypageButton"
-                android:layout_width="77dp"
-                android:layout_height="69dp"
+                android:layout_width="77sp"
+                android:layout_height="77dp"
                 android:background="#00ff0000"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/trophy" />
+                android:src="@drawable/mypage_img" />
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="마이페이지"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -36,16 +44,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
             android:gravity="center_horizontal"
+            android:layout_marginRight="20sp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/herestateView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:background="#E2E2E2"
+                android:background="#FFFFFF"
+                android:gravity="center"
                 android:scaleType="fitXY"
-                android:text="청주시"
+                android:text="우리동네 승부사"
                 android:textColor="#000000"
                 android:textSize="15pt"
                 android:textStyle="bold" />
@@ -58,20 +67,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="122dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/adView"
             android:layout_width="match_parent"
-            android:layout_height="122dp"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:src="@drawable/trophy"
+            android:src="@drawable/ad_test4_img"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -84,80 +95,80 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="100sp"
+                android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30sp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButton1"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/soccer_img" />
 
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Soccer"
+                    android:text="축구"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30sp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButton2"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_marginBottom="10sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/futsal_img" />
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="100sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Futsal"
+                    android:text="풋살"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButton3"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/basketball_img" />
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Basketball"
+                    android:text="농구"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -172,76 +183,76 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30sp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButton4"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/baseball_img" />
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="100sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Baseball"
+                    android:text="야구"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30sp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButton5"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/badminton_img" />
 
                 <TextView
                     android:id="@+id/textView5"
-                    android:layout_width="100sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Badminton"
+                    android:text="배드민턴"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButton6"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_marginRight="10dp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/tabletennis_img" />
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="100sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Tabletennis"
+                    android:text="탁구"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -256,28 +267,27 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="100sp"
+                android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30sp"
                 android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButton7"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/golf_img" />
 
                 <TextView
                     android:id="@+id/textView7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Golf"
+                    android:text="골프"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -290,20 +300,20 @@
 
                 <ImageButton
                     android:id="@+id/imageButton8"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_marginBottom="10sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/tennis_img" />
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="100sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Tennis"
+                    android:text="테니스"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -315,21 +325,21 @@
 
                 <ImageButton
                     android:id="@+id/imageButton9"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10sp"
                     android:background="#00ff0000"
                     android:padding="0dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/trophy" />
+                    android:src="@drawable/e_sport_img" />
 
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Esports"
+                    android:text="E-스포츠"
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </LinearLayout>
